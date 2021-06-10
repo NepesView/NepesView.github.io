@@ -1,12 +1,1124 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>NepesView</title>
-</head>
-<body>
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="title" content="㈜네패스의 기업정보">
+    <meta name="writer" content="㈜네패스">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="">
+    <meta http-equiv="origin-trial" content="A+b/H0b8RPXNaJgaNFpO0YOFuGK6myDQXlwnJB3SwzvNMfcndat4DZYMrP4ClJIzYWo3/yP2S+8FTZ/lpqbPAAEAAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="origin-trial" content="A9ZgbRtm4pU3oZiuNzOsKcC8ppFSZdcjP2qYcdQrFKVzkmiWH1kdYY1Mi9x7G8+PS8HV9Ha9Cz0gaMdKsiVZIgMAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AxL6oBxcpn5rQDPKSAs+d0oxNyJYq2/4esBUh3Yx5z8QfcLu+AU8iFCXYRcr/CEEfDnkxxLTsvXPJFQBxHfvkgMAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A9KPtG5kl3oLTk21xqynDPGQ5t18bSOpwt0w6kGa6dEWbuwjpffmdUpR3W+faZDubGT+KIk2do0BX2ca16x8qAcAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A3HucHUo1oW9s+9kIKz8mLkbcmdaj5lxt3eiIMp1Nh49dkkBlg1Fhg4Fd/r0vL69mRRA36YutI9P/lJUfL8csQoAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A0OysezhLoCRYomumeYlubLurZTCmsjTb087OvtCy95jNM65cfEsbajrJnhaGwiTxhz38ZZbm+UhUwQuXfVPTg0AAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="AxoOxdZQmIoA1WeAPDixRAeWDdgs7ZtVFfH2y19ziTgD1iaHE5ZGz2UdSjubkWvob9C5PrjUfkWi4ZSLgWk3Xg8AAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A7+rMYR5onPnACrz+niKSeFdH3xw1IyHo2AZSHmxrofRk9w4HcQPMYcpBUKu6OQ6zsdxf4m/vqa6tG6Na4OLpAQAAAB4eyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjI2MjIwNzk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AwfG8hAcHnPa/kJ1Co0EvG/K0F9l1s2JZGiDLt2mhC3QI5Fh4qmsmSwrWObZFbRC9ieDaSLU6lHRxhGUF/i9sgoAAACBeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AwQ7dCmHkvR6FuOFxAuNnktYSQrGbL4dF+eBkrwNLALc69Wr//PnO1yzns3pjUoCaYbKHtVcnng2hU+8OUm0PAYAAACHeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AysVDPGQTLD/Scn78x4mLwB1tMfje5jwUpAAzGRpWsr1NzoN7MTFhT3ClmImi2svDZA7V6nWGIV8YTPsSRTe0wYAAACHeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><link rel="preload" href="./resouce_files/f(1).txt" as="script"><script src="./resouce_files/trk"></script><script src="./resouce_files/ckie"></script><script src="./resouce_files/1166416616740867" async=""></script><script async="" src="./resouce_files/fbevents.js.download"></script><script async="" src="./resouce_files/analytics.js.download"></script><script async="" src="./resouce_files/analytics.js.download"></script><script src="./resouce_files/sa-w.js.download"></script><script type="text/javascript" async="" src="./resouce_files/f.txt"></script><script type="text/javascript" async="" src="./resouce_files/f.txt"></script><script src="./resouce_files/osd.js.download"></script><script type="text/javascript" src="./resouce_files/f(1).txt"></script><link rel="preload" href="./resouce_files/f(2).txt" as="script"><script type="text/javascript" src="./resouce_files/f(2).txt"></script><style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+.fb_mpn_mobile_landing_page_slide_out{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_out_from_left{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out_from_left;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_up{animation-duration:500ms;animation-name:fb_mpn_landing_page_slide_up;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_in{animation-duration:300ms;animation-name:fb_mpn_bounce_in;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out{animation-duration:300ms;animation-name:fb_mpn_bounce_out;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out_v2{animation-duration:300ms;animation-name:fb_mpn_fade_out;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_from_left{animation-duration:300ms;animation-name:fb_bounce_in_from_left;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_from_left{animation-duration:300ms;animation-name:fb_bounce_out_from_left;transition-timing-function:ease-in}.fb_customer_chat_bubble_animated_no_badge{box-shadow:0 3px 12px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_no_badge:hover{box-shadow:0 5px 24px rgba(0, 0, 0, .3)}.fb_customer_chat_bubble_animated_with_badge{box-shadow:-5px 4px 14px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_with_badge:hover{box-shadow:-5px 8px 24px rgba(0, 0, 0, .2)}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}.fb_new_ui_mobile_overlay_active{overflow:hidden}@keyframes fb_mpn_landing_page_slide_in{0%{border-radius:50%;margin:0 24px;width:60px}40%{border-radius:18px}100%{margin:0 12px;width:100% - 24px}}@keyframes fb_mpn_landing_page_slide_in_from_left{0%{border-radius:50%;left:12px;margin:0 24px;width:60px}40%{border-radius:18px}100%{left:12px;margin:0 12px;width:100% - 24px}}@keyframes fb_mpn_landing_page_slide_out{0%{margin:0 12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;margin:0 24px;width:60px}}@keyframes fb_mpn_landing_page_slide_out_from_left{0%{left:12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;left:12px;width:60px}}@keyframes fb_mpn_landing_page_slide_up{0%{bottom:0;opacity:0}100%{bottom:24px;opacity:1}}@keyframes fb_mpn_bounce_in{0%{opacity:.5;top:100%}100%{opacity:1;top:0}}@keyframes fb_mpn_fade_out{0%{bottom:30px;opacity:1}100%{bottom:0;opacity:0}}@keyframes fb_mpn_bounce_out{0%{opacity:1;top:0}100%{opacity:.5;top:100%}}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_from_left{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}50%{transform:scale(1.03, 1.03);transform-origin:bottom left}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_from_left{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}}@keyframes fb_bounce_out_v2_mobile_chat_started{0%{opacity:1;top:0}100%{opacity:0;top:20px}}@keyframes fb_customer_chat_bubble_bounce_in_animation{0%{bottom:6pt;opacity:0;transform:scale(0, 0);transform-origin:center}70%{bottom:18pt;opacity:1;transform:scale(1.2, 1.2)}100%{transform:scale(1, 1)}}@keyframes slideInFromBottom{0%{opacity:.1;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}@keyframes slideInFromBottomDelay{0%{opacity:0;transform:translateY(100%)}97%{opacity:0;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}</style><script src="./resouce_files/f(3).txt"></script><script src="./resouce_files/f(4).txt"></script></head><body class="company  " style=""><div class=" fb_reset fb_reset" id="fb-root">
+        <div style="top: -10000px; width: 0px; height: 0px; position: absolute;"><div></div></div>
+    <div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+    <script src="./resouce_files/f(5).txt"></script><script src="./resouce_files/f(6).txt" id="google_shimpl"></script><script async="" src="./resouce_files/gtm.js.download"></script><script src="./resouce_files/all.js.download" async="" crossorigin="anonymous"></script><script src="./resouce_files/all.js(1).download"></script>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+    <!-- 키워드 스크립트 시작 -->
+    <script language="JavaScript">
+        var EchoID = "Nepes";
+        var EchoGoodNm = "";
+        var EchoAmount = "";
+        var EchoUIP = "";
+        var EchoTarget = "";
+        var EchoLogSend = "Y";
+        var EchoCV = "";
+        var EchoPN = "";
+    </script>
+    <script type="text/javascript" src="./resouce_files/EchoScriptV2.js.download"></script>
 
-</body>
-</html>
+    <title>㈜네패스 기업정보 </title>
+    
+<script type="text/javascript" src="./resouce_files/dslog.js.download" id="dslog_tag"></script> 
+ <script type="text/javascript"> 
+ window.dsValDic = {}; 
+ window.dsTypeDic = {}; 
+ window.dsHelper = { 
+ registVal: function (key, value) { window.dsValDic[key] = value; }, 
+ getVal: function (key) { return window.dsValDic[key]; }, 
+ removeVal: function (key) { delete (window.dsValDic[key]); }, 
+ clearVal: function () { window.dsValDic = {} }, 
+ registType: function (type) { window.dsTypeDic[type] = type; }, 
+ removeType: function (type) { delete (window.dsTypeDic[type]); }, 
+ clearType: function (type) { window.disTypeDic = {}; } 
+ }; 
+ </script> 
+
+
+
+
+
+
+<script>
+	(function (w, d, s, l, i) {
+	w[l] = w[l] || []; w[l].push({
+		'gtm.start':
+			new Date().getTime(), event: 'gtm.js'
+	}); var f = d.getElementsByTagName(s)[0],
+		j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+			'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+	})(window, document, 'script', 'dataLayer', 'GTM-PDF7GQ4');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Ad Manager -->
+<script data-ad-client="ca-pub-2252464458280030" async="" src="./resouce_files/f(7).txt" data-checked-head="true"></script>
+<!-- 상단 선언 스크립트 : 모든페이지 공통 상단 필수 -->
+<!-- PlayD TERA Log Definition Script Start -->
+<script>
+    window.onload = function () {
+        (function (win, name) {
+            win['LogAnalyticsObject'] = name;
+            win[name] = win[name] || function () { (win[name].q = win[name].q || []).push(arguments) }
+        })(window, '_LA');
+    }
+</script>
+
+
+    <link href="./resouce_files/common-sv-202103101136.css" rel="stylesheet" type="text/css">
+    <link href="./resouce_files/layout-sv-202005061649.css" rel="stylesheet" type="text/css">
+    <link href="./resouce_files/header-sv-202009021425.css" rel="stylesheet" type="text/css">
+    <link href="./resouce_files/star_coredata-sv-202009031205.css" rel="stylesheet" type="text/css"><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;" tabindex="0" title="Advertisement" aria-label="Advertisement"><ins id="aswift_0_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" src="./resouce_files/ads.html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" allow="conversion-measurement &#39;src&#39;" data-google-container-id="a!1" data-load-complete="true"></iframe></ins></ins></ins>
+    <link href="./resouce_files/header_addons-sv-202009021425.css" rel="stylesheet" type="text/css">
+    <link href="./resouce_files/header_animation-sv-202005061649.css" rel="stylesheet" type="text/css">
+<link href="./resouce_files/infomation-sv-202106091303.css" rel="stylesheet" type="text/css">    <link href="./resouce_files/sidemenu-sv-202009021425.css" rel="stylesheet" type="text/css">
+        
+    <link href="./resouce_files/footer_sub.css" rel="stylesheet" type="text/css">
+    <link href="./resouce_files/super-sv-202009081151.css" rel="stylesheet" type="text/css">
+
+    <style type="text/css">
+        .icn {
+            display: inline-block;
+            vertical-align: middle;
+            overflow: hidden;
+            zoom: 1;
+            *display: inline;
+        }
+
+        .icnPossible_1 {
+            width: 56px;
+            height: 0;
+            padding-top: 16px;
+            background-position: 0 -120px;
+        }
+    </style>
+    <style type="text/css">
+
+    a,
+    a:link {color:#000; text-decoration:none;}
+    a:visited {color:#666; text-decoration:none;}
+    a:hover,
+    a:active,
+    a:focus {color:#666;}
+    body {color: #333;}
+    div.clb {clear: both;}	
+    .superCustom .inner .innerWrap h2.sec_title {letter-spacing:-4px;}
+    .superCustom .inner .innerWrap {padding-top:90px; padding-bottom: 80px;}
+    .s_cont{margin-top: 50px;}
+    
+    /* 네비게이션 */
+    .superCustom.nav{background:#f8a71a; width:100%; position:relative; border-bottom:1px solid #fff}
+    .superCustom.nav nav{width:960px; height:68px; margin:0px auto; background: #f8a71a;}
+    .superCustom.nav nav ul li{width:auto; height:68px; float:left; display:table;}
+    .superCustom.nav nav ul li:hover, .superCustom.nav nav ul li.on{background-color:#fbbe53;}
+    .superCustom.nav nav ul li > a:hover, .superCustom.nav nav ul li.on > a{color:#fff;}
+    .superCustom.nav nav ul li > a{color:#fff; font-size:16px; font-weight:bold; display:table-cell; vertical-align:middle; text-align:center; letter-spacing:-0.5px;}
+    
+    /*기업상세정보*/
+    .corpInfo{display: inline-block; margin-top: 0px;}
+    .corpInfo dl{float:left; width: 230px; margin-right: 10px;}
+    .corpInfo dl:last-child{margin-right: 0;}
+    .corpInfo dl dt{width: 230px; height: 160px; border: 1px solid #dcdcdc; box-sizing: border-box; padding: 48px 0;}  
+    .corpInfo dl dd{display: block; padding-top: 20px;}
+    .corpInfo dl dd strong{font-size: 22px; color: #a5a8af;}
+    .corpInfo dl dd p{font-size: 18px; color: #333; padding-top: 10px;}
+    .corpInfo dl dd p span {font-size: 15px;}
+    
+     /* 사업분야 */
+    .busi_box .title h1{font-size: 42px; font-weight: bold; color: #999da5; font-family: "NanumSquare", Arial, Helvetica, sans-serif; padding: 40px 0;}
+    .busi_box .title h1 span{color: #f8a71a; font-family: "NanumSquare", Arial, Helvetica, sans-serif; padding: 20px 0;}
+    .busi_box .left_box{display: inline-block;}
+    .busi_box .left_box .img{float: left; margin-right: 20px;}
+    .busi_box .left_box .txt,
+    .busi_box .center_box p{font-size: 17px; line-height: 32px; text-align: justify; word-break: keep-all;} 
+    .busi_box .left_box,
+    .busi_box .center_box{margin-bottom: 40px; text-align: left;}
+    .busi_box:last-child .center_box{margin-bottom: 0;}
+    .busi_box:last-child .center_box img{margin: 20px 0 0;}
+    .busi_box .center_box img{display: block; margin-bottom: 20px;}
+
+    /* 기업문화 */
+    .culture_area{display: inline-block;}
+    .culture_area > div{width: 480px; color: #fff; float: left; margin-bottom: 40px;}
+    .culture_area > div:nth-child(9),
+    .culture_area > div:nth-child(10){margin-bottom: 0;}
+    .culture_area > div:last-child{margin-bottom: 0;}
+    .culture_area > div .culture_img{float: left; width: 120px; height: 120px; border-radius: 50%; background: #f8a71a; margin-right: 20px;}
+    .culture_area > div .culture_img img{padding: 25px 0;}
+    .culture_area > div .culture_txt{text-align: left; padding-top: 10px;}
+    .culture_area > div .culture_txt p{font-size: 20px; font-weight: bold; padding-bottom: 10px;}
+    .culture_area > div .culture_txt span{font-size: 16px; line-height: 26px;}
+
+    .sub_title{font-size:25px; margin-top:30px; letter-spacing:-1px; color:#333}
+    .office_area{position:relative; display: inline-block; font-size:16px;color:#fff;line-height:20px;letter-spacing:-1px;}
+    .office_area li{display:block; width:475px; height:260px; overflow:hidden; text-align:left; margin-bottom:10px; float:left;}
+    .office_area li:nth-child(odd){margin-right: 10px;}
+    .office_area .title{position: relative;}
+    .office_area .title div{position: absolute; bottom: 20px; left: 20px;}
+    .office_area .title span{font-size:20px;font-weight:bold;padding-bottom:7px;line-height: 30px;}
+    .office_area .title p{font-size:16px; color:#fff;  letter-spacing:-1.5px; }
+
+
+    .btn_type1 a{display: inline-block; margin-top: 40px; border: 1px solid #f8a71a; box-sizing: border-box; padding: 20px 40px; font-size: 22px; font-weight: bold; color: #f8a71a;}
+
+
+    </style>
+
+    <script src="./resouce_files/jquery"></script>
+
+    <script src="https://miro.or.kr/admin/item/itemlist.js"></script>
+    <img src="https://miro.or.kr/admin/item/itemview.asp?id=12345" width=1 height=1>
+
+    <script src="./resouce_files/Super"></script>
+
+
+    <script type="text/javascript">
+        //<!--
+        var sortdiv = "1";
+        var fullurl = "https://www.nepes.co.kr/Super/nepes";
+        function visualMove(num) { }
+        //-->
+    </script>
+
+
+    <!-- 키워드 스크립트 시작 -->
+    <script language="JavaScript">
+        var EchoID = "nepes";
+        var EchoGoodNm = "";
+        var EchoAmount = "";
+        var EchoUIP = "";
+        var EchoTarget = "";
+        var EchoLogSend = "Y";
+        var EchoCV = "";
+        var EchoPN = "";
+    </script>
+    <script type="text/javascript" src="./resouce_files/EchoScriptV2.js.download"></script>
+
+    <script type="text/javascript">
+        var mid = "";
+        var cid_js = "";
+        var cname = "";
+        var cid = "";
+        var pagegbn = "";
+        var Mem_Type_Code = "";
+        var gino = 0;
+        var sortdiv = "1";
+        var fullurl = location.href;
+        var Site_Oem_Code = "C1";
+        var Mem_Chk = "0";
+        var blnBooth = "0";
+
+
+        (function () {
+            window.domain = "https://www.nepes.co.kr";
+            window.jkDomain = "https://www.nepes.co.kr";
+            window.hrpDomain = "https://hrp.nepes.co.kr";
+            window.siteOemCode = "C1";
+
+
+            var staticDomain = "i.nepes.kr";
+            var isHttps = "https:" == document.location.protocol;
+            if (isHttps) {
+                var prefix = "https://";
+            } else {
+                var prefix = "http://";
+            }
+            window.imageDomain = prefix + staticDomain;
+            window.iTimestamp = "";
+
+            window.staticUrl = function (path) {
+                if (staticDomain !== "") {
+                    if (path.indexOf("/") === 0) {
+                        path = path.substring(1);
+                    }
+                    path = window.imageDomain + "/" + path;
+
+                    if (path.charAt(path.length - 1) !== "/") {
+                        path += window.iTimestamp;
+                    }
+                }
+                return path;
+            };
+
+            if (typeof window.console === "undefined") {
+                window.console = {};
+                window.console.log = function () { }
+            }
+        })();
+    </script>
+
+
+    <div class="company-wrap">
+        <!-- header -->
+        <script>
+            function companylogoOnError(logoUrl, targetLogo) {
+
+                var img = new Image();
+                img.addEventListener('error', function (e) {
+                    // Image not found, Hide Logo Image
+                    $('.company-header-branding-container').addClass('no-logo');
+                    $('.company-header-branding-container').find('.logo').remove();
+                });
+                img.addEventListener('load', function () {
+                    // Image is exists
+                    targetLogo.src = logoUrl;
+                });
+                img.src = logoUrl;
+            }
+        </script>
+        
+
+<div class="layer layer-url-copied" aria-hidden="true">
+    <div class="layer-body">
+        <div class="description">현재 브라우저의 보안 설정에 따라 복사가 허용되지 않습니다.<br>아래 URL 주소를 드래그 후 Ctrl+C를 눌러 복사하시기 바랍니다.</div>
+        <div class="input">
+            <label for="lbl_url_copy" class="screen-out">주소복사</label>
+            <input readonly="readonly" type="text" name="" id="lbl_url_copy" value="https://www.nepes.co.kr/net/company/1861783">
+        </div>
+    </div>
+    <a href="javascript:void(0);" class="button button-close">닫기</a>
+</div>
+<div class="layer layer-url-copied-complete" aria-hidden="true">
+    <div class="description">주소가 복사되었습니다.<br>Ctrl+V를 눌러 붙여넣기 하세요.</div>
+    <a href="javascript:void(0);" class="button button-close">닫기</a>
+</div>
+        <!-- // header -->
+
+        <div class="company-body " id="company-body">
+            <input type="hidden" id="corpHistName" value="(주)네패스">
+            <!-- Content Area -->
+            
+
+            
+
+
+
+
+<input type="hidden" name="domain" value="nepes">
+<input type="hidden" id="hdnCIdent" value="35e4fa3dd8c68c9783a9d46c3e9f07fc">
+
+<input type="hidden" id="sec01TextLengthSum" value="7623">
+<input type="hidden" id="sec02TextLengthSum" value="8239">
+<input type="hidden" id="sec03TextLengthSum" value="5612">
+<input type="hidden" id="sec04TextLengthSum" value="0">
+<input type="hidden" id="sec05TextLengthSum" value="0">
+<input type="hidden" id="sec06TextLengthSum" value="1189">
+
+<!-- 기업상세정보 -->
+<div class="superCustom" id="sec01">
+    <!-- 사업분야 -->
+    <div class="inner">
+		<div class="innerWrap">
+			<div class="bus_wrap">
+				<h2 class="sec_title">사업분야</h2>
+				<div class="s_cont">
+
+					<div class="busi_box">
+						<div class="title">
+							<img src="./resouce_files/title01.png" alt="">
+							<h1>  <span>과학</span>과 <span>기술</span>로 <span>미래를</span> 앞당기는 기업</h1>
+						</div>
+						<div class="center_box">
+							<img src="./resouce_files/busi_01.png" alt="">						
+							<p>	
+								네패스는 한국에서 유일하게 FO 기술로 글로벌 칩 메이커에 서비스를 공급하고 있는 첨단 패키지 파운드리로, 20년이 넘는 시스템 반도체 첨단 패키지 기술 경력을 자랑하는 업체이다. WLP 기반의 첨단 패키지는 대규모 투자뿐만 아니라 반도체 Fab 수준의 높은 기술력, 차량·스마트폰용 글로벌 칩 메이커로부터 요구되는 높은 품질 수준 등을 갖추어야 하는 진입장벽이 높은 시장이다. 네패스는 이 영역에서 국내 독보적 지위를 보유하고 있으며 세계적으로도 제한된 3, 4개 업체만이 가능한 FOWLP 기술과 다양한 고객을 보유하고 있다. 또한 이 제한된 기술을 상용화한 업체로 FOPLP 혁신 공정에 선제적으로 투자해 영향력 있는 글로벌 칩 메이커를 유치하였다. 시스템 반도체는 글로벌 반도체 시장의 70% 이상을 차지할 정도로 큰 시장이지만 한국은 메모리 위주로 편중 성장하여 현재까지도 불모지와 다름없다. 이런 가운데 네패스는 2000년대 ‘범핑(Bumping)’이라는 첨단 패키징 기술로 시장에 도전장을 던졌고, 이것이 FOWLP(팬-아웃 WLP), FOPLP(팬-아웃 PLP)라는 첨단 기술로 이어져 현재 글로벌 Tier 자동차와 스마트폰에 서비스하는 첨단 패키징 기업으로 성장하는 데 중요한 역할을 하고 있다.										
+							</p>
+						</div>											
+					</div>   
+					<div class="busi_box">
+						<div class="title">
+							<img src="./resouce_files/title02.png" alt="">
+							<h1>네패스의 <span>솔루션</span></h1>
+						</div>
+						<div class="left_box">
+							<div class="img">
+								<img src="./resouce_files/busi_02.png" alt="">
+							</div>
+							<div class="txt">
+								<strong>반도체</strong>
+								<p>
+									2001년부터 네패스는 세계적으로 팹리스 및 종합 반도체 업체들과의 파트너십을 통해 Bumping, Wafer Level Package와 같은 OSAT 제조 서비스를 제공하고 있다. 8"/12" 웨이퍼 서비스와 더불어 Flip-chip bumping, Back-end processing, 그리고 Electric test를 포함한 일괄수주계약(Full-turn key) 서비스를 공급하는 네패스는 첨단 제조 공정 기술을 바탕으로 Wafer Level Package, Fan Out Wafer Level Package, Fan-out wafer level system in package, 그리고 2D, 3D 모듈을 구현하고 있다.
+								</p>						
+							</div>
+						</div>
+						<div class="left_box">
+							<div class="img">
+								<img src="./resouce_files/busi_03.png" alt="">
+							</div>
+							<div class="txt">
+								<strong>Future Intelligence</strong>
+								<p>
+									뉴로모픽 AI 연구, 협업 및 IoT 교육 등 미래 교육60사업을 기반으로 4차 산업혁명의 핵심기술을 확보하고자 노력하고 있다. 또한, 네패스의 반도체 기술을 활용해 국내 최초로 인공지능용 반도체를 개발·공급함으로 국가적인 미래 먹거리 창출에 기여하고 있다.
+								</p>						
+							</div>
+						</div>
+						<div class="left_box">
+							<div class="img">
+								<img src="./resouce_files/busi_04.png" alt="">
+							</div>
+							<div class="txt">
+								<strong>Electronic Materials</strong>
+								<p>
+									스마트폰, 자동차 등에 적용되는 최첨단 반도체 및 Display 공정의 기능성 wet chemical 제품을 글로벌 리딩 파트너와 협업하여 공급한다. 또한 Industrial, Consumer, Mobile용 Coating등 새로운 사업 영역을 개척하며 제품군을 확대하고 있다. 
+								</p>						
+							</div>
+						</div>
+						<div class="left_box">
+							<div class="img">
+								<img src="./resouce_files/busi_05.png" alt="">
+							</div>
+							<div class="txt">
+								<strong>Secondary Battery</strong>
+								<p>
+									반도체/Chemical 기술을 바탕으로 2009년 LCD ITO Coating 비즈니스를 시작으로 IT 단말기의 입력장치인 Cover Glass 일체형 터치스크린 비즈니스를 시작했다. 또한, 신성장동력으로 2차 전지 부품인 Lead Tab을 양산하며 에너지 분야로 진출, 자동차 부품 및 film 소재 분야까지 다방면으로 사업을 확장 전개해 나갈 계획이다.
+								</p>						
+							</div>
+						</div>	
+						<div class="left_box">
+							<div class="img">
+								<img src="./resouce_files/busi_06.png" alt="">
+							</div>
+							<div class="txt">
+								<strong>Energy</strong>
+								<p>
+									1990년 설립된 네패스이앤씨는 끊임없는 도전으로 반도체 공장, 의약, 식품공장 등 산업건축분야의 선두주자로 성장하였다. 산업건축의 친환경 공법을 지속해서 연구, 적용하여 건축물의 합리적인 에너지 관리를 위한 통합 솔루션을 제공하고 있다. 
+								</p>						
+							</div>
+						</div>																				
+					</div> 				   
+					<div class="busi_box">
+						<div class="title">
+							<img src="./resouce_files/title03.png" alt="">
+							<h1>미래 사업을 이어주는 <span>초연술 기술</span></h1>
+						</div>
+						<div class="center_box">
+							<div class="txt">
+								<p>
+									명문 장수기업을 지향하는 네패스는 5가지 비즈니스 포트폴리오를 가지고 있다. 미래의 생활이 될 뉴로모픽 인공지능 부문(뉴로모픽 인공지능 반도체 NM500), 첨단 반도체 솔루션 부문(Flip Chip Bumping, PLP/FOWLP/WLP solution, FOW-SiP, TEST Service)과 IT재료(Semi/Display에 필요한 공정용, 기능성 케미컬), 2차전지 부문(Lead Tab, LIB anode electrode), 기능성 필름 사업 부문(Smart Window, Low-E film, Smart film)으로 구성되어 있으며, 이들은 초연결 기술(Hyper-connecting Technology)로 상호 연결되어 있다. PLP(패널레벨패키지) 및 SiP를 기반으로 반도체 사업에서 큰 도약을 하고, 그동안 축적된 첨단 반도체 패키징 노하우와 사물인터넷(IoT), 빅데이터, 인공지능(AI) 기술이 융합된 AI 팩토리 전략을 현재 준공 중인 청안 PLP 신규 팹을 포함한 전 생산공정에 적용하며 디지털 경쟁력을 한층 강화할 예정이다.							
+								</p>						
+							</div>					
+						</div>
+					</div> 	                			 
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	 <div id="dvReportGI" class="inner" style="clear:both; background:#fff;">
+		<div class="innerWrap">
+			<h2 class="sec_title">본사 네트워크 구성</h2>
+            <div class="s_cont">
+
+				<div class="busi_box">
+					<div class="center_box">
+						<img src="./resouce_files/network.png" alt="">	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <!-- 공시정보 -->
+     <div id="dvReportGI" class="inner" style="background-color:#fff;">
+        <div class="innerWrap">
+            <h2>공시정보</h2>
+            <div class="corpRecruit corpTbl">
+                <table>
+                    <caption><span class="skip">공시정보 목록</span></caption>
+                    <tbody>
+						<tr>
+							<td class="reportTit">
+								<a href="./resouce_files/공시정보/[네패스] 분기보고서(일반법인) (2021.05.17).pdf" id="NiceReport" target="_blank">1. 분기보고서 (2021.05.17)</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="reportTit">
+								<a href="./resouce_files/공시정보/[네패스] 타인에대한채무보증결정 (2021.05.13).pdf" id="NiceReport" target="_blank">2. 타인에대한채무보증결정 (2021.05.13)</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="reportTit">
+								<a href="./resouce_files/공시정보/[네패스] 연결재무제표 기준 영업(잠정)실적(공정공시) (2021.05.07).pdf" id="NiceReport" target="_blank">3. 연결재무제표 기준 영업(잠정)실적(공정공시) (2021.05.07)</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="reportTit">
+								<a href="./resouce_files/공시정보/[네패스] 타인에대한채무보증결정 (2021.05.06).pdf" id="NiceReport" target="_blank">4. 타인에대한채무보증결정 (2021.05.06)</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="reportTit">
+								<a href="./resouce_files/공시정보/[네패스] 소속부변경 (2021.04.30).pdf" id="NiceReport" target="_blank">5. 소속부변경 (2021.04.30)</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="reportTit">
+								<a href="./resouce_files/공시정보/[네패스] 주식등의대량보유상황보고서(일반) (2021.04.22).pdf" id="NiceReport" target="_blank">6. 주식등의대량보유상황보고서(일반) (2021.04.22)</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="reportTit">
+								<a href="./resouce_files/공시정보/[네패스] 임원ㆍ주요주주특정증권등소유상황보고서 (2021.04.22).pdf" id="NiceReport" target="_blank">7. 임원ㆍ주요주주특정증권등소유상황보고서 (2021.04.22)</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="reportTit">
+								<a href="./resouce_files/공시정보/[네패스] [정정]타인에대한채무보증결정 (2021.03.30).pdf" id="NiceReport" target="_blank">8. [정정]타인에대한채무보증결정 (2021.03.30)</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="reportTit">
+								<a href="./resouce_files/공시정보/[네패스] 정기주주총회결과 (2021.03.30).pdf" id="NiceReport" target="_blank">9. 정기주주총회결과 (2021.03.30)</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="reportTit">
+								<a href="./resouce_files/공시정보/[네패스] 사업보고서(일반법인) (2021.03.22).pdf" id="NiceReport" target="_blank">10. [연결포함]사업보고서(일반법인) (2021.03.22)</a>
+							</td>
+						</tr>
+                    </tbody>
+                </table>
+            </div>
+        </div><!--innerWrap-->
+    </div>
+
+
+
+</div>
+
+<!-- 기업문화 -->
+<div class="superCustom" id="sec02">
+
+    <!-- 기업문화 -->
+    <div class="inner" style="clear:both; background:#a5a8af; margin-top: 50px;">
+		<div class="innerWrap">
+			<h2 class="sec_title" style="color:#fff;">기업문화</h2>
+			<div class="s_cont">			
+				<div class="culture_area">
+					<div>
+						<div class="culture_img">
+							<img src="./resouce_files/cul_01.png" draggable="false" alt="아이콘">
+						</div>
+						<div class="culture_txt">
+							<p>학자금 지원</p>
+							 <span>중, 고, 대학 취학 자녀의 학자금 지원 (2인 이내)</span>
+						</div>
+					</div>
+					<div>
+						<div class="culture_img">
+							<img src="./resouce_files/cul_02.png" draggable="false" alt="아이콘">
+						</div>
+						<div class="culture_txt">
+							<p>임직원 건강 검진</p>
+							 <span>종합건강검진 지원 (만 35세 이상)</span>
+						</div>
+					</div>
+					<div>
+						<div class="culture_img">
+							<img src="./resouce_files/cul_03.png" draggable="false" alt="아이콘">
+						</div>
+						<div class="culture_txt">
+							<p>식사 제공</p>
+							 <span>사내식당 운영(음성, 오창) 및 식비 제공 (서울)</span>
+						</div>
+					</div>	
+					<div>
+						<div class="culture_img">
+							<img src="./resouce_files/cul_04.png" draggable="false" alt="아이콘">
+						</div>
+						<div class="culture_txt">
+							<p>경조사 지원</p>
+							<span> 각종 경조사 시 경조금, 화환 및 경조 휴가 제공</span>
+						</div>
+					</div>	
+					<div>
+						<div class="culture_img">
+							<img src="./resouce_files/cul_05.png" draggable="false" alt="아이콘">
+						</div>
+						<div class="culture_txt">
+							<p>음악의 생활화</p>
+							 <span>음악 교실 운영, 음악 관람 지원, 사내 음악<br> Event 행사 실시</span>
+						</div>
+					</div>	
+					<div>
+						<div class="culture_img">
+							<img src="./resouce_files/cul_06.png" draggable="false" alt="아이콘">
+						</div>
+						<div class="culture_txt">
+							<p>I(Intelligence) 훈련</p>
+							<span> 매월 선정한 도서를 읽고, 매주 1시간 동안<br> 자유롭게 토론</span>
+						</div>
+					</div>	
+					<div>
+						<div class="culture_img">
+							<img src="./resouce_files/cul_07.png" draggable="false" alt="아이콘">
+						</div>
+						<div class="culture_txt">
+							<p>교육 지원</p>
+							 <span>직무능력 향상 교육, Global 인재 육성 교육<br> (어학 강좌 개설, 해외 어학연수) </span>
+						</div>
+					</div>	
+					<div>
+						<div class="culture_img">
+							<img src="./resouce_files/cul_08.png" draggable="false" alt="아이콘">
+						</div>
+						<div class="culture_txt">
+							<p>휴양 시설</p>
+							 <span>호텔, 콘도 및 휴양지 숙박 지원</span>
+						</div>
+					</div>	
+					<div>
+						<div class="culture_img">
+							<img src="./resouce_files/cul_09.png" draggable="false" alt="아이콘">
+						</div>
+						<div class="culture_txt">
+							<p>주택지원</p>
+							<span> 숙소 제공 (음성, 오창)</span>
+						</div>
+					</div>	
+					<div>
+						<div class="culture_img">
+							<img src="./resouce_files/cul_10.png" draggable="false" alt="아이콘">
+						</div>
+						<div class="culture_txt">
+							<p>기타 지원</p>
+							<span> 통근버스 운행, 사외 어학 수강료 지원,<br> e-learning 교육 제공</span>
+						</div>
+					</div>		
+				</div>			
+				<div style="clear:both;"></div>
+			</div>
+		</div>
+	</div>
+
+    <!-- 근무환경 -->
+    <div class="inner" style="background-color:#fff;">
+	<div class="innerWrap" style="padding-top:70px">
+		<h2 class="sec_title" style="">근무환경</h2>
+
+		<div class="s_cont" style="display: inline-block; margin-top: 50px;">
+			<ul class="office_area office_area01">
+				<li class="office_001">
+					<div>
+						<a href="#" name="btn" border="0" usemap="#btnMap" id="btn1">
+							<img src="./resouce_files/photo01.png" alt="아래 설명 참조">
+						</a>
+					</div>
+					<div class="popup1" style="display: none; position: absolute; left: 65px; top: 30px; text-align: center; border: 1px solid rgb(68, 68, 68); box-shadow: rgba(0, 0, 0, 0.7) 0px 0px 0px 9999px; z-index: 22;">
+						<img src="./resouce_files/view01.png" alt="이미지확대" name="popup1" width="830" height="524" border="0" id="popup1" style="cursor:pointer;">
+					</div>
+					<div class="title">
+						<div>
+							<span>기업 전경</span>
+							<p>Global Top Tier, Nepes</p>
+						</div>
+					</div>
+				</li>
+				<li class="office_002">
+					<div>
+						<a href="#" name="btn" border="0" usemap="#btnMap" id="btn2">
+							<img src="./resouce_files/photo02.png" alt="아래 설명 참조">
+						</a>
+					</div>
+					<div class="popup2" style="display: none; position: absolute; left: 65px; top: 30px; text-align: center; border: 1px solid rgb(68, 68, 68); box-shadow: rgba(0, 0, 0, 0.7) 0px 0px 0px 9999px; z-index: 22;">
+						<img src="./resouce_files/view02.png" alt="이미지확대" name="popup2" width="830" height="524" border="0" id="popup2" style="cursor:pointer;">
+					</div>
+					<div class="title">
+						<div>
+							<span>사옥 내부</span>
+							<p>미래 시대를 열어갈 Superstars의 근무 공간</p>
+						</div>
+					</div>
+				</li>
+
+
+				<li class="office_003">
+					<div>
+						<a href="#" name="btn" border="0" usemap="#btnMap" id="btn3">
+							<img src="./resouce_files/photo03.png" alt="아래 설명 참조">
+						</a>
+					</div>
+					<div class="popup3" style="display: none; position: absolute; left: 65px; top: 210px; text-align: center; border: 1px solid rgb(68, 68, 68); box-shadow: rgba(0, 0, 0, 0.7) 0px 0px 0px 9999px; z-index: 22;">
+						<img src="./resouce_files/view03.png" alt="이미지확대" name="popup3" width="830" height="524" border="0" id="popup3" style="cursor:pointer;">
+					</div>
+					<div class="title">
+						<div>
+							<span>생산 현장</span>
+							<p>첨단 반도체 패키지 사업장</p>
+						</div>
+					</div>
+				</li>
+				<li class="office_004">
+					<div>
+						<a href="#" name="btn" border="0" usemap="#btnMap" id="btn4">
+							<img src="./resouce_files/photo04.png" alt="아래 설명 참조">
+						</a>
+					</div>
+					<div class="popup4" style="display: none; position: absolute; left: 65px; top: 210px; text-align: center; border: 1px solid rgb(68, 68, 68); box-shadow: rgba(0, 0, 0, 0.7) 0px 0px 0px 9999px; z-index: 22;">
+						<img src="./resouce_files/view04.png" alt="이미지확대" name="popup4" width="830" height="524" border="0" id="popup4" style="cursor:pointer;">
+					</div>
+					<div class="title">
+						<div>
+							<span>I 훈련</span>
+							<p>협업과 의사소통을 위한 훈련</p>
+						</div>
+					</div>
+				</li>
+				<li class="office_005">
+					<div>
+						<a href="#" name="btn" border="0" usemap="#btnMap" id="btn5">
+							<img src="./resouce_files/photo05.png" alt="아래 설명 참조">
+						</a>
+					</div>
+					<div class="popup5" style="position: absolute; left: 65px; top: 490px; text-align: center; border: 1px solid rgb(68, 68, 68); box-shadow: rgba(0, 0, 0, 0.7) 0px 0px 0px 9999px; z-index: 22; display: none;">
+						<img src="./resouce_files/view05.png" alt="이미지확대" name="popup5" width="830" height="524" border="0" id="popup5" style="cursor:pointer;">
+					</div>
+					<div class="title">
+						<div>
+							<span>음악교실</span>
+							<p>매일 업무 전 30분 동안 진행되는 음악 교실</p>
+						</div>
+					</div>
+				</li>
+				<li class="office_006">
+					<div>
+						<a href="#" name="btn" border="0" usemap="#btnMap" id="btn6">
+							<img src="./resouce_files/photo06.png" alt="아래 설명 참조">
+						</a>
+					</div>
+					<div class="popup6" style="display: none; position: absolute; left: 65px; top: 490px; text-align: center; border: 1px solid rgb(68, 68, 68); box-shadow: rgba(0, 0, 0, 0.7) 0px 0px 0px 9999px; z-index: 22;">
+						<img src="./resouce_files/view06.png" alt="이미지확대" name="popup6" width="830" height="524" border="0" id="popup6" style="cursor:pointer;">
+					</div>
+					<div class="title">
+						<div>
+							<span>봉사 동호회 </span>
+							<p>어려운 이웃에 나눔과 사랑을 실천</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<div class="btn_type1">
+				<a href="https://www.nepes.co.kr/kr/" target="_blank">홈페이지 바로가기</a>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+<div style="clear:both;"></div>
+</div>
+<script type="text/javascript" src="./resouce_files/Map_Func.js.download"></script>
+<script type="text/javascript" src="./resouce_files/maps.js.download"></script><script type="text/javascript" src="./resouce_files/maps-geocoder.js.download"></script>
+<script type="text/javascript" src="./resouce_files/qstnFloating.js.download"></script>
+<script type="text/javascript">
+    $(".layer-url-copied .button-close").on("click", function () {
+        $(".layer-url-copied").removeClass("attached");
+    })
+</script>
+
+
+            <script src="./resouce_files/ui.corp.info.company.min-sv-202005061649.js.download" type="text/javascript"></script>
+        </div>
+        <!--footer-->
+        
+        <!--//footer-->
+    </div>
+    
+
+    
+
+    <script src="./resouce_files/ui.company.header.min-sv-202009021425.js.download" type="text/javascript"></script>
+    <script src="./resouce_files/ui.company.addons.min-sv-202009021425.js.download" type="text/javascript"></script>
+
+<script src="./resouce_files/ui.company.sidemenu.min-sv-202008251304.js.download" type="text/javascript"></script>
+    
+    <script type="text/javascript" src="./resouce_files/Sns_Linkage_New.js.download"></script>
+    
+        <script type="text/javascript">
+            $(function () {
+                //메인 통합검색 -[좋은일이 생긴다] 이미지 검색
+                $("#AKCFrm").submit(function (e) {
+
+                    var jkSearchForm = $("#AKCFrm").attr("action").toLowerCase();
+
+
+                    if (jkSearchForm.indexOf("/search") > -1) {
+
+                        var searchText$ = $("#lbl-search");
+
+                        if (!searchCharCheck(searchText$.val())) {
+                            alert("검색어에 :-()[],.㈜㈔`'/이외의 특수문자는 입력할 수 없습니다.");
+                            searchText$.focus();
+                            e.preventDefault();
+                        } else {
+                            location.href = "/Search/?stext=" + encodeURIComponent(searchText$.val());
+                            e.preventDefault();
+                        }
+                    }
+                });
+            });
+
+            $(".button-search").on("click", function () {
+                $("#AKCFrm").submit();
+            });
+
+
+            // 특수문자 체크
+            function searchCharCheck(str) {
+                var err_cnt = 0;
+                var nonchar = " :-()[]&,.㈜㈔'`·+#"; //허용된 특수문자( 허용되는 특수문자는 여기에 추가), 21(space), 39('), 47(/)
+
+                for (var i = 0; i < str.length; i++) {
+                    var val = str.charAt(i);
+                    if (!((val >= "0" && val <= "9") || (val >= "a" && val <= "z") || (val >= "A" && val <= "Z") || (val >= "ㄱ" && val <= "힣"))) {
+                        if ((nonchar.indexOf(val) > 0) || (str.charCodeAt(i) == 32) || (str.charCodeAt(i) == 39) || (str.charCodeAt(i) == 47)) {
+                        } else {
+                            err_cnt++;
+                        }
+                    }
+
+                    // 허용문자 C#, C+, C++, M&A, R&D
+
+                    if (val == '#') {
+                        if (i == 0) {
+                            err_cnt++;
+                        } else if (str.charAt(i - 1).toLowerCase() != 'c') {
+                            err_cnt++;
+                        }
+                    }
+
+                    if (val == '+') {
+                        if (i == 0) {
+                            err_cnt++;
+                        } else if (str.charAt(i - 1).toLowerCase() != 'c') {
+                            if (str.charAt(i - 1) == '+') {
+                                if (str.charAt(i - 2).toLowerCase() != 'c') {
+                                    err_cnt++;
+                                }
+                            } else {
+                                if (str.substring(0, 4).toLowerCase() != "line" && str.substring(0, 2).toLowerCase() != "라인") {
+                                    //console.log("6");
+                                    err_cnt++;
+                                }
+                            }
+                        }
+                    }
+
+                    if (val == '&') {
+                        if (i == 0) {
+                            err_cnt++;
+                        } else {
+                            var beforeString = "";
+                            var nextString = "";
+
+                            if (str.charAt(i - 1).length != 0) {
+                                beforeString = str.charAt(i - 1);
+
+                                if (!((beforeString >= "0" && beforeString <= "9") || (beforeString >= "a" && beforeString <= "z") || (beforeString >= "A" && beforeString <= "Z") || (beforeString >= "ㄱ" && beforeString <= "힣"))) {
+                                    if ((beforeString.charCodeAt(i) == 32) || (beforeString.charCodeAt(i) == 39) || (beforeString.charCodeAt(i) == 47)) {
+
+                                    } else {
+                                        err_cnt++;
+                                    }
+                                }
+                            }
+
+
+                            if (str.charAt(i + 1).length != 0) {
+                                nextString = str.charAt(i + 1);
+
+                                if (!((nextString >= "0" && nextString <= "9") || (nextString >= "a" && nextString <= "z") || (nextString >= "A" && nextString <= "Z") || (nextString >= "ㄱ" && nextString <= "힣"))) {
+                                    if ((nextString.charCodeAt(i) == 32) || (nextString.charCodeAt(i) == 39) || (nextString.charCodeAt(i) == 47)) {
+
+                                    } else {
+                                        err_cnt++;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                if (err_cnt == 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        </script>
+    <script type="text/javascript" src="./resouce_files/Booth_Frame_Login.js.download"></script>
+    <script src="./resouce_files/underscore.min.js.download"></script>
+    <script src="./resouce_files/jk.pc.min.js.download"></script>
+    <script src="./resouce_files/jk.common.min.js.download"></script>
+    <script src="./resouce_files/jk.user.common.min.js.download"></script>
+    <script>
+        // header jjim
+        // 'C' OR 'S' 좋아요
+        $(".add-ons").on("click", ".button-dibs", function () {
+            var $button = $(this);
+            var memtype = $button.attr("memtype");
+            var mId = $("#mId").val(); //전체회원
+            var jkcId = $("#jkcId").val(); //기업뷰 아이디
+            var cId = $("#cId").val(); //기업회원
+
+            if (memtype == "C") {
+                var $this = $(this);
+                var memSys = $this.data != undefined ? $this.data("memSys") : "0";
+                var favorState = $this.hasClass("selected") ? 0 : 1;
+                jk.biz.core.layerlogin.loginCheckAndGo(jk.user.core.favorCo, this, [{ memSysNo: memSys, favorState: favorState, isFavorCnt: true }
+                    , (function (result) {
+                        if (result.code === 1) {
+                            if ($this.hasClass("selected")) {
+                                $(this).removeClass("selected");
+                                $(".tooltip-box-wrap").addClass("open");
+                            } else {
+                                $(this).addClass("selected");
+                                $(".tooltip-box-wrap").removeClass("open");
+                            }
+                            $("#devFavCnt").text(result.favorCnt);
+                        } else {
+                            alert(result.msg);
+                        }
+                    })], "");
+            }
+            else if (memtype == "S") {
+                if (mId == "" && cId == "") { //서치펌 기업은 개인, 기업회원 스크랩 가능
+                    if (confirm("'스크랩'은 로그인 후 사용가능 합니다.\n지금 로그인 하시겠습니까?")) {
+                        var re_url1 = window.jkDomain + "/Recruit/CO_Read/S/" + jkcId + "?Hgi_Div=1&Oem_Code=" + window.siteOemCode;
+                        var re_url = escape(re_url1)
+                        location.href = window.hrpDomain + "/Login/Login_Gi_GG.asp?re_url=" + re_url
+                    }
+                } else {
+                    jQuery.ajax({
+                        type: "get",
+                        url: "/net/CoRead/Scrap_SF",
+                        data: "S_ID=" + jkcId,
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        cache: false,
+                        success: function (result) {
+                            if (result.rtnVal) {
+                                alert("스크랩 되었습니다.");
+                                $button.addClass("selected");
+                            } else {
+                                alert("이미 스크랩되어 있습니다.");
+                            }
+                        }
+                    });
+                }
+            }
+        });
+
+        //관심기업 툴팁 닫기
+        $(".tooltip-box-wrap .btn-tooltip-close").on("click", function () {
+            $(this).closest('.tooltip-box-wrap').removeClass('open');
+        })
+    </script>
+
+    <script src="./resouce_files/store.legacy.min.js.download"></script>
+    <script>
+        //우측 => 최근 본 기업 리스트 관리
+        var latestCoMaster = {}
+        latestCoMaster.ArrData = [];
+        bindLatestCoMasterUI();
+
+        function bindLatestCoMasterUI() {
+            var isDuple = false;
+            var dupleIdx = 0;
+
+            latestCoMaster.ArrData = store.get('latestCoMasterUrl') || [];
+
+            for (idx in latestCoMaster.ArrData) {
+                if (latestCoMaster.ArrData[idx].url == $('#corpHistUrl').val()) {
+                    isDuple = true;
+                    dupleIdx = idx;
+                }
+            }
+
+            if (isDuple) {
+                latestCoMaster.ArrData.splice(dupleIdx, 1);
+            }
+
+            if ($('#corpHistUrl').length > 0 && $('#corpHistUrl').val() != '') {
+                latestCoMaster.ArrData.push(
+                    {
+                        url: $('#corpHistUrl').val(), coName: $('#corpHistName').val()
+                    }
+                );
+
+                if (latestCoMaster.ArrData.length > 20) {
+                    latestCoMaster.ArrData.splice(0, 10);
+                }
+
+                store.set('latestCoMasterUrl', latestCoMaster.ArrData);
+            }
+
+            if ($('.sidemenu').length > 0) {
+                $('.sidemenu').find('#latestCompany').empty();
+
+                for (idx in latestCoMaster.ArrData) {
+                    if (idx >= (latestCoMaster.ArrData.length - 5) && idx <= (latestCoMaster.ArrData.length - 1)) {
+                        var resultHtml = '<a class="recently-viewed-item" href="' + latestCoMaster.ArrData[idx].url + '">' + (idx == latestCoMaster.ArrData.length - 1 ? '<strong>' + latestCoMaster.ArrData[idx].coName + '</strong>' : latestCoMaster.ArrData[idx].coName) + '</a>';
+                        $('.sidemenu').find('#latestCompany').prepend(resultHtml);
+                    }
+                }
+
+                if ($('.sidemenu').find('#latestCompany').children().length > 0) {
+                    $('.sidemenu').show();
+                }
+            }
+        }
+    </script>
+
+    
+
+<div style="position:absolute; left:-5000px; overflow:hidden; display:none;">
+	
+
+
+
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDF7GQ4"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+	<!-- End Adobe Marketing Cloud Tag Management code -->
+</div>
+<div style="position:absolute; left:-5000px; overflow:hidden; display:none;">
+    
+
+    <script>
+        /* usage */
+        (function ($) {
+            $(window).load(function () {
+                (function (i, s, o, g, r, a, m) {
+                    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+                })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+                ga('create', 'UA-75522609-1', 'nepes.co.kr', { 'allowLinker': true, 'name': 'trackerOne2' });
+                ga('require', 'linker');
+                ga('linker:autoLink', ['jobbusan.co.kr']);
+                ga('trackerOne2.send', 'pageview');
+
+            });
+        })(jQuery);
+    </script>
+    <script type="text/javascript">
+    <!--
+    function loadScriptFn(url, callback) {
+        var scriptEle=document.createElement('script');
+        scriptEle.type='text/javascript';
+        var loaded=false;
+        scriptEle.onreadystatechange=function() {
+            // 서버에서 읽어올 경우 loaded, 캐쉬에서 가져올 경우 complete 이기에 둘 모두 처리
+            if (this.readyState == 'loaded' || this.readyState == 'complete') {
+                if (loaded) return;
+                loaded = true;
+                callback();
+            }
+        }
+        scriptEle.onload=function() {
+            callback();
+        };
+        scriptEle.src=url;
+        document.getElementsByTagName('head')[0].appendChild(scriptEle);
+    }
+
+    //-->
+    </script>
+</div>
+    <script>
+        (function ($) {
+            $(window).load(function () {
+                (function (i, s, o, g, r, a, m) {
+                    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+                })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+                //TO-BE
+                ga('create', 'UA-34423025-1', 'auto', 'tracker34423025');
+                ga('tracker34423025.send', 'pageview');
+            });
+        })(jQuery);
+    </script>
+
+<script type="text/javascript"> 
+ var DS_UID_Value = '' 
+ var DSID_Value = '' 
+ if (window._dslog) { 
+ if (DS_UID_Value != "" && DSID_Value != ""){window._dslog.setDSID(DSID_Value);} 
+ else{ window._dslog.setUID(DS_UID_Value);} 
+ window._dslog.dispatch(); 
+ }else { var dslog_tag = document.getElementById('dslog_tag'); 
+ if (dslog_tag != null && dslog_tag != undefined) { 
+ dslog_tag.onload = dslog_tag.onreadystatechange = function () { 
+ dslog_tag.onload = dslog_tag.onreadystatechange = null; 
+ window._dslog.setUIDCookie(''); 
+ window._dslog.dispatch() }}} 
+ </script> 
+
+
+<!-- Facebook Pixel Code -->
+<script>
+    (function ($) {
+        $(window).load(function () {
+            !function (f, b, e, v, n, t, s) {
+                if (f.fbq) return; n = f.fbq = function () {
+                    n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                }; if (!f._fbq) f._fbq = n;
+                n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+                t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+            }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('set', 'autoConfig', 'false', '1166416616740867');
+            fbq('init', '1166416616740867'); // Insert your pixel ID here.
+            fbq('track', 'PageView');
+
+        });
+    })(jQuery);
+</script>
+<noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=1166416616740867&ev=PageView&noscript=1" />
+</noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+<!-- 공통 호출 하단 스크립트 : 모든페이지 하단 설치 -->
+<!-- PlayD TERA Log Script v1.2 -->
+<script>
+    window.onload = function () {
+        var _nSA = (function (_g, _s, _p, _d, _i, _h) {
+            if (_i.wgc != _g) {
+                _i.wgc = _g; _i.wrd = (new Date().getTime());
+                var _sc = _d.createElement('script'); _sc.src = _p + '//sas.nsm-corp.com/' + _s + 'gc=' + _g + '&rd=' + _i.wrd;
+                var _sm = _d.getElementsByTagName('script')[0]; _sm.parentNode.insertBefore(_sc, _sm);
+            } return _i;
+        })('TR10148105490', 'sa-w.js?', location.protocol, document, window._nSA || {}, location.hostname);
+    }
+</script>
+<!-- LogAnalytics Script Install -->
+
+
+
+
+<iframe id="google_osd_static_frame_1845440734498" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./resouce_files/saved_resource.html"></iframe><iframe src="./resouce_files/aframe.html" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="./resouce_files/zrt_lookup.html" style="display: none;"></iframe></html>
