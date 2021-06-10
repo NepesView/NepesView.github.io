@@ -1,0 +1,13 @@
+.sidemenu { z-index: 3000; position: absolute; left: 50%; top: 0; width: 1040px; margin-left: -520px; }
+.sidemenu.fixed { position: fixed; top: 130px !important; }
+.sidemenu-right { position: absolute; right: -170px; top: 0; width: 150px; text-align: left; }
+.sidemenu-right .button-view-all { position: relative; display: block; width: 150px; height: 42px; padding: 12px 0 0 15px; margin-bottom: 8px; border: 1px solid #dadde0; background-color: #fff; font-size: 12px; color: #343b41; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.sidemenu-right .button-view-all:after { content: ''; position: absolute; top: 17px; right: 9px; width: 4px; height: 7px; background: url("/content/images/recruit/gi/co_read/tpl_bg_gir_improve_1.png?v=20200814") no-repeat -140px 0; }
+.sidemenu-right .recently-viewed { background-color: #f8f9fb; border: 1px solid #e8ecef; }
+.sidemenu-right .recently-viewed-header { height: 47px; padding: 15px 15px 0; border-bottom: 1px solid #f4f2f0; font-size: 12px; font-weight: bold; color: #333; background-color: #fff; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.sidemenu-right .recently-viewed-list { padding: 8px 0 8px; }
+.sidemenu-right .recently-viewed-item { position: relative; overflow: hidden; display: block; width: 100%; padding: 9px 15px 8px; white-space: nowrap; text-overflow: ellipsis; color: #666; font-size: 12px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.sidemenu-right .recently-viewed-item:after { content: ''; display: inline-block; position: relative; top: 4px; width: 4px; height: 7px; margin-left: 4px; vertical-align: top; background: url("/content/images/company/icon-arrow-recently.png?v=20200814") no-repeat; }
+.sidemenu-right .recently-viewed-item:hover { text-decoration: underline; }
+.sidemenu-right .button-to-top { overflow: hidden; position: relative; display: block; width: 100%; height: 45px; text-indent: -9999px; }
+.sidemenu-right .button-to-top:before { content: ''; display: block; position: absolute; left: 50%; top: 50%; width: 37px; height: 9px; margin: -5px 0 0 -19px; background: url("/content/images/recruit/gi/co_read/tpl_bg_gir_improve_1.png?v=20200814") no-repeat -164px 0; }
