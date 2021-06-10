@@ -1,0 +1,86 @@
+.add-ons { position: absolute; right: 0; top: 50%; font-size: 0; text-align: right; }
+.add-ons .share { position: relative; display: inline-block; margin-left: 10px; vertical-align: top; }
+.add-ons .dibs { display: inline-block; position:relative; margin-left: 10px; vertical-align: top; }
+.dibs .tooltip-box-wrap{display:none; z-index:1; position:absolute; left:50%; top:-38px; margin-left:-103px; padding:0px 30px 0px 12px; min-width:165px; height:27px; background:#f7443f; border-radius:30px;}
+.dibs .tooltip-box-wrap.open{display:block;}
+.dibs .tooltip-box-wrap:after{content:""; display:inline-block; position:absolute; left:50%; bottom:-6px; margin-left:-6px; width:12px; height:7px; background:url(/content/images/ver_1/common/tpl_sp_btn.png?2020022600) no-repeat; background-position:-55px -148px;}
+.dibs .tooltip-box-wrap .txt{font-family:"맑은 고딕", Malgun Gothic, "돋움", Dotum, sans-serif; font-size:12px; color:#fff; line-height:26px;}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {.dibs .tooltip-box-wrap .txt{line-height:25px;}} 
+.dibs .tooltip-box-wrap .txt em{color:#fff94a;} 
+.dibs .tooltip-box-wrap .btn-tooltip-close{position:absolute; right:12px; top:8px; width:9px; height:9px;} 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {.dibs .tooltip-box-wrap .btn-tooltip-close{top:9px;}} 
+.dibs .tooltip-box-wrap .btn-tooltip-close:before{content:""; display:inline-block; position:absolute; left:0; top:0; width:9px; height:9px; background:url(/content/images/ver_1/common/tpl_sp_btn.png?2020022600) no-repeat; background-position:-33px -148px;}
+.company-header-container.fixed .dibs .tooltip-box-wrap, .company-header-container.headFixed .dibs .tooltip-box-wrap{display:none !important;}
+.add-ons .home { display: inline-block; margin-left: 10px; vertical-align: top; }
+.add-ons .button-home { display: block; overflow: hidden; position: relative; height: 41px; padding:0 25px 0 17px; background-color: rgba(0, 0, 0, 0.7); border-radius: 41px; }
+.add-ons .button-home:before { content: '\AE30\C5C5   \D648\D398\C774\C9C0'; display: block; height: 41px; padding-top: 11px; font-size: 13px; color: #666666; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.add-ons .button-home:after { content: ''; display: block; position: absolute; right:17px; top:15px; width: 6px; height: 10px; background: url("/content/images/company/sprite-header.png?v=20200731") no-repeat 0 0; }
+.add-ons .button-home:hover { background-color: white; }
+.add-ons .button-dibs { position: relative; display: block; height: 41px; padding: 13px 13px 12px 36px; border-radius: 21px; background-color: rgba(0, 0, 0, 0.7); font-size: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.add-ons .button-dibs:hover { background-color: white; }
+.add-ons .button-dibs:hover .icon { background-position: 0 -140px; }
+.add-ons .button-dibs.on .icon { background-position: 0 -169px; }
+.add-ons .button-dibs.selected .icon { background-position: 0 -169px; }
+.add-ons .button-dibs.selected .icon div { background: url("/content/images/company/sprite-header.png?v=20200731") no-repeat 0 -169px; display: block; position: absolute; top: 0; left: 0; width: 21px; height: 19px; opacity: 0; }
+.add-ons .button-dibs.selected .icon div:before, 
+.add-ons .button-dibs.selected .icon div:after { content: ''; background: inherit; background-size: 100%; width: inherit; height: inherit; display: inherit; position: relative; top: inherit; left: inherit; opacity: 0; }
+/*
+.add-ons .button-dibs.selected .icon .heart-animation-1 { -webkit-animation: heartFloatMain-1 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) both; animation: heartFloatMain-1 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) both; }
+.add-ons .button-dibs.selected .icon .heart-animation-1:before, .add-ons .button-dibs.selected .icon .heart-animation-1:after { width: 21px; height: 19px; visibility: hidden; }
+.add-ons .button-dibs.selected .icon .heart-animation-1:before { opacity: .6; -webkit-animation: heartFloatSub-1 1s 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) both; animation: heartFloatSub-1 1s 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) both; }
+.add-ons .button-dibs.selected .icon .heart-animation-1.after { -webkit-animation: heartFloatSub-2 1s 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275) both; animation: heartFloatSub-2 1s 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275) both; opacity: .75; }
+.add-ons .button-dibs.selected .icon .heart-animation-2 { -webkit-animation: heartFloatMain-2 1s 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275) both; animation: heartFloatMain-2 1s 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275) both; }
+.add-ons .button-dibs.selected .icon .heart-animation-2:before, .add-ons .button-dibs.selected .icon .heart-animation-2:after { width: 21px; height: 19px; visibility: hidden; }
+.add-ons .button-dibs.selected .icon .heart-animation-2.before { -webkit-animation: heartFloatSub-3 1s 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) both; animation: heartFloatSub-3 1s 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) both; opacity: .25; }
+.add-ons .button-dibs.selected .icon .heart-animation-2.after { -webkit-animation: heartFloatSub-4 1s 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275) both; animation: heartFloatSub-4 1s 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275) both; opacity: .4; }
+*/
+.add-ons .button-dibs .icon { position: absolute; left: 11px; top: 11px; width: 21px; height: 19px; background: url("/content/images/company/sprite-header.png?v=20200731") no-repeat 0 -198px; }
+.add-ons .button-dibs .count { position: relative; top: -1px; display: inline-block; vertical-align: top; font-size: 13px; color: #666666; font-family: 'Verdana'; letter-spacing: -1px; }
+.add-ons .button-share { overflow: hidden; display: block; width: 41px; height: 41px; }
+.add-ons .button-share:before { content: ''; display: block; width: 41px; height: 41px; background: url("/content/images/company/sprite-header.png?v=20200731") no-repeat 0 -380px; }
+.add-ons .button-share:hover:before { background-position: 0 -329px; }
+.add-ons .popup-share,
+.add-ons .layer-share{ z-index: 10; position: absolute; left: -5px; top: 45px; width: 180px; padding: 16px 12px 13px; border: 1px solid #565d79; background-color: #fff; font-size: 0; text-align: center; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.add-ons .popup-share.hidden,
+.add-ons .layer-share.hidden { display: none; }
+.add-ons .popup-share:after,
+.add-ons .layer-share:after { content: ''; display: block; position: absolute; left: 20px; top: -7px; width: 11px; height: 11px; background-color: #fff; border-left: 1px solid #565d79; border-bottom: 1px solid #565d79; transform: rotate(135deg); }
+.add-ons .popup-share .button,
+.add-ons .layer-share .button { display: inline-block; margin: 0 3px; vertical-align: top; font-size: 11px; color: #666; text-align: center; }
+.add-ons .popup-share .button:before,
+.add-ons .layer-share .button:before { content: ''; display: block; width: 31px; height: 31px; margin: 0 auto 7px; background-image: url("http://i.jobkorea.kr/content/images/ver_1/star/sp_coredata.png"); background-repeat: no-repeat; }
+.add-ons .popup-share .button-facebook:before,
+.add-ons .layer-share .button-facebook:before { background-position: -46px -131px; }
+.add-ons .popup-share .button-bookmark:before,
+.add-ons .layer-share .button-bookmark:before { background-position: -79px -131px; }
+.add-ons .popup-share .button-copy-url:before,
+.add-ons .layer-share .button-copy-url:before { background-position: -112px -131px; }
+
+.screen-out { overflow: hidden; position: absolute; left: -10000px; clip: rect(0, 0, 0, 0); clip: rect(0 0 0 0); border: 0; padding: 0; }
+
+.popup-url-copied-complete,
+.layer-url-copied-complete { display: none; z-index: 5000; position: fixed; left: 50%; top: 50%; width: 330px; height: 98px; margin: -49px 0 0 -165px; border: 1px solid #565d79; background-color: #fff; text-align: center; }
+.popup-url-copied-complete.attached,
+.layer-url-copied-complete.attached { display: table; }
+.popup-url-copied-complete .description.
+.layer-url-copied-complete .description { display: table-cell; vertical-align: middle; font-size: 13px; color: #333; line-height: 1.5; }
+.popup-url-copied-complete .button-close,
+.layer-url-copied-complete .button-close { overflow: hidden; position: absolute; right: 22px; top: 22px; width: 22px; height: 22px; }
+.popup-url-copied-complete .button-close:before,
+.layer-url-copied-complete .button-close:before { content: ''; display: block; width: 22px; height: 22px; background: url("http://i.jobkorea.kr/content/images/ver_1/common/tpl_sp_btn.png?2018032814") no-repeat 0 -65px; }
+.popup-url-copied,
+.layer-url-copied { display: none; z-index: 5000; position: fixed; left: 50%; top: 50%; width: 490px; height: 200px; margin: -100px 0 0 -245px; border: 1px solid #565d79; background-color: #fff; text-align: center; }
+.popup-url-copied.attached,
+.layer-url-copied.attached { display: table; }
+.popup-url-copied .popup-body,
+.layer-url-copied .layer-body { display: table-cell; vertical-align: middle; text-align: center; }
+.popup-url-copied .input,
+.layer-url-copied .input { padding: 0 30px; }
+.popup-url-copied .input input,
+.layer-url-copied .input input { width: 100%; height: 34px; padding: 0 10px; border: 1px solid #e0e0e0; color: #333; font-weight: bold; background-color: #fbfbfb; letter-spacing: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.popup-url-copied .description,
+.layer-url-copied .description { margin-bottom: 20px; font-size: 13px; color: #333; }
+.popup-url-copied .button-close,
+.layer-url-copied .button-close { overflow: hidden; position: absolute; right: 22px; top: 22px; width: 22px; height: 22px; }
+.popup-url-copied .button-close:before,
+.layer-url-copied .button-close:before { content: ''; display: block; width: 22px; height: 22px; background: url("http://i.jobkorea.kr/content/images/ver_1/common/tpl_sp_btn.png?2018032814") no-repeat 0 -65px; }

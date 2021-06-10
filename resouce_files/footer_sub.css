@@ -1,0 +1,52 @@
+﻿@charset "utf-8";
+/*
+.File Name		: /inc/css/ver_1/footer_sub.css
+.Final Editor	: 방민재 (2013.12.23)
+*/
+
+/* 서브 Footer
+------------------------------------------------------------------------------------ */
+#subFooter {clear:both; position:relative; overflow:hidden; zoom:1;}
+#subFooter .serviceLink {position:relative; width:100%; padding-top:14px; background:url(/Content/images/common/footer/footer_bg_all_1.gif) repeat-x 0 0; z-index:9;}
+#subFooter .serviceLink ul {position:relative; width:100%; height:27px; margin:0 auto;}
+#subFooter .serviceLink ul:after {content:" "; display:block; height:0; clear:both;}
+#subFooter .serviceLink ul li {float:left; padding:0 19px; background:url(/Content/images/common/footer/footer_bg_all_1.gif) no-repeat right -64px;}
+#subFooter .serviceLink ul li.sitemap {background:none;}
+#subFooter .serviceLink .familysite {position:absolute; top:8px; right:25px;}
+#subFooter .serviceLink .familysite button span {position:absolute; top:-9999em; width:1px; height:1px; overflow:hidden;}
+#subFooter .serviceLink .familysiteBtn {display:block; width:160px; height:22px; background:url(/Content/images/common/footer/footer_bg_all_1.gif) no-repeat 0 -95px; text-indent:-5000em;}
+#subFooter .serviceLink .listLinkFamily {position:absolute; top:0; right:0px;}
+#subFooter .serviceLink .familysite .btnFamilyClose {position:absolute; top:2px; right:2px; background:url(/Content/images/main/tpl_bg_icon_1.png) no-repeat -160px -60px; overflow:hidden; vertical-align:middle; width:18px; height:17px; }
+
+#subFooter .onlineDigitalSub {width:100%; height:65px; padding-top:15px; font:11px dotum,"돋움",sans-serif; color:#adadad; letter-spacing:-1px; text-align:left;}
+#subFooter .onlineDigitalSub h3 {font-weight:bold; color:#666; padding:0 0 5px 15px;}
+#subFooter .onlineDigitalSub .onlineDigitalSubTit:after {clear:both; display:block; content:""; height:0; overflow:hidden;}
+#subFooter .onlineDigitalSub .onlineDigitalSubTit h3{float:left;}
+#subFooter .onlineDigitalSub .onlineDigitalSubTit p {overflow:hidden; color:#666;}
+#subFooter .onlineDigitalSub .onlineDigitalSubTit p span {padding:0 12px;}
+#subFooter .onlineDigitalSub ol {padding-left:15px;}
+#subFooter .onlineDigitalSub ol:after {content:" "; display:block; height:0; clear:both;}
+#subFooter .onlineDigitalSub ol li {padding:2px 0;}
+#subFooter .onlineDigitalSub ol li.odd {float:left; width:180px; clear:both;}
+#subFooter .policy {position:absolute; top:53px; right:0; width:225px; height:55px; padding-left:15px; border-left:1px solid #f2f2f2; z-index:1; text-align:left;}
+#subFooter .policy ul:after {content:" "; display:block; height:0; clear:both;}
+#subFooter .policy ul li {float:left;}
+#subFooter .policy ul li.odd {width:100px;}
+#subFooter .policy ul li.add {margin-left:5px;}
+#subFooter .customer {position:relative; width:100%; height:40px; color:#7f7f7f; background-color:#f5f5f5; font:11px tahoma,sans-serif; zoom:1;}
+#subFooter .customer:after {content:" "; display:block; height:0; clear:both;}
+#subFooter .customer h3 {float:left; padding:15px 10px 0 25px;}
+#subFooter .customer h3 a {font:bold 11px dotum,"돋움",sans-serif; letter-spacing:-1px;}
+#subFooter .customer span.ko {font:11px dotum,"돋움",sans-serif; letter-spacing:-1px;}
+#subFooter .customer dl {float:left; padding-top:13px;}
+#subFooter .customer dl dd {float:left; padding:0 10px; background:url(/Content/images/common/footer/footer_bg_all_1.gif) no-repeat right -62px; letter-spacing:0;}
+#subFooter .customer dl dd.email {background:none;}
+#subFooter .customer dl dd span.sat {margin-left:5px;}
+#subFooter .customer dl dd a {color:#7f7f7f; font:11px tahoma,sans-serif;}
+#subFooter .customer dl dd a:hover {text-decoration:underline;}
+#subFooter .customer p {position:absolute; top:5px; right:17px;}
+#subFooter #copyright {text-align:center; padding-top:10px;}
+#subFooter p.moveToTop {position:absolute; top:10px; right:0; z-index:9;}
+#subFooter p.moveToTop a {display:block; width:18px; height:28px; background:url(/Content/images/common/footer/footer_bg_all_1.gif) no-repeat -203px -95px; text-indent:-5000em; z-index:100; overflow:hidden;}
+
+body#stMain #subFooter {width:960px; margin:0 auto; background-color:#fff;}

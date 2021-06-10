@@ -1,0 +1,88 @@
+@-webkit-keyframes heartPulse { 0% { -webkit-transform: scale(1);
+    transform: scale(1); }
+  50% { -webkit-transform: scale(1.5);
+    transform: scale(1.5); } }
+@keyframes heartPulse { 0% { -webkit-transform: scale(1);
+    transform: scale(1); }
+  50% { -webkit-transform: scale(1.5);
+    transform: scale(1.5); } }
+@-webkit-keyframes heartUnlike { 50% { -webkit-transform: scale(0.75);
+    transform: scale(0.75); } }
+@keyframes heartUnlike { 50% { -webkit-transform: scale(0.75);
+    transform: scale(0.75); } }
+@-webkit-keyframes heartFloatMain-1 { 0% { opacity: 0;
+    -webkit-transform: translate(0) rotate(0);
+    transform: translate(0) rotate(0); }
+  50% { opacity: 1;
+    -webkit-transform: translate(0, -25px) rotate(-20deg);
+    transform: translate(0, -25px) rotate(-20deg); } }
+@keyframes heartFloatMain-1 { 0% { opacity: 0;
+    -webkit-transform: translate(0) rotate(0);
+    transform: translate(0) rotate(0); }
+  50% { opacity: 1;
+    -webkit-transform: translate(0, -25px) rotate(-20deg);
+    transform: translate(0, -25px) rotate(-20deg); } }
+@-webkit-keyframes heartFloatMain-2 { 0% { opacity: 0;
+    -webkit-transform: translate(0) rotate(0) scale(0);
+    transform: translate(0) rotate(0) scale(0); }
+  50% { opacity: .9;
+    -webkit-transform: translate(-10px, -38px) rotate(25deg) scale(1);
+    transform: translate(-10px, -38px) rotate(25deg) scale(1); } }
+@keyframes heartFloatMain-2 { 0% { opacity: 0;
+    -webkit-transform: translate(0) rotate(0) scale(0);
+    transform: translate(0) rotate(0) scale(0); }
+  50% { opacity: .9;
+    -webkit-transform: translate(-10px, -38px) rotate(25deg) scale(1);
+    transform: translate(-10px, -38px) rotate(25deg) scale(1); } }
+@-webkit-keyframes heartFloatSub-1 { 0% { visibility: hidden;
+    -webkit-transform: translate(0) rotate(0);
+    transform: translate(0) rotate(0); }
+  50% { visibility: visible;
+    -webkit-transform: translate(13px, -13px) rotate(30deg);
+    transform: translate(13px, -13px) rotate(30deg); } }
+@keyframes heartFloatSub-1 { 0% { visibility: hidden;
+    -webkit-transform: translate(0) rotate(0);
+    transform: translate(0) rotate(0); }
+  50% { visibility: visible;
+    -webkit-transform: translate(13px, -13px) rotate(30deg);
+    transform: translate(13px, -13px) rotate(30deg); } }
+@-webkit-keyframes heartFloatSub-2 { 0% { visibility: hidden;
+    -webkit-transform: translate(0) rotate(0);
+    transform: translate(0) rotate(0); }
+  50% { visibility: visible;
+    -webkit-transform: translate(18px, -10px) rotate(55deg);
+    transform: translate(18px, -10px) rotate(55deg); } }
+@keyframes heartFloatSub-2 { 0% { visibility: hidden;
+    -webkit-transform: translate(0) rotate(0);
+    transform: translate(0) rotate(0); }
+  50% { visibility: visible;
+    -webkit-transform: translate(18px, -10px) rotate(55deg);
+    transform: translate(18px, -10px) rotate(55deg); } }
+@-webkit-keyframes heartFloatSub-3 { 0% { visibility: hidden;
+    -webkit-transform: translate(0) rotate(0);
+    transform: translate(0) rotate(0); }
+  50% { visibility: visible;
+    -webkit-transform: translate(-10px, -10px) rotate(-40deg);
+    transform: translate(-10px, -10px) rotate(-40deg); }
+  100% { -webkit-transform: translate(-50px, 0);
+    transform: translate(-50px, 0); } }
+@keyframes heartFloatSub-3 { 0% { visibility: hidden;
+    -webkit-transform: translate(0) rotate(0);
+    transform: translate(0) rotate(0); }
+  50% { visibility: visible;
+    -webkit-transform: translate(-10px, -10px) rotate(-40deg);
+    transform: translate(-10px, -10px) rotate(-40deg); }
+  100% { -webkit-transform: translate(-50px, 0);
+    transform: translate(-50px, 0); } }
+@-webkit-keyframes heartFloatSub-4 { 0% { visibility: hidden;
+    -webkit-transform: translate(0) rotate(0);
+    transform: translate(0) rotate(0); }
+  50% { visibility: visible;
+    -webkit-transform: translate(2px, -18px) rotate(-25deg);
+    transform: translate(2px, -18px) rotate(-25deg); } }
+@keyframes heartFloatSub-4 { 0% { visibility: hidden;
+    -webkit-transform: translate(0) rotate(0);
+    transform: translate(0) rotate(0); }
+  50% { visibility: visible;
+    -webkit-transform: translate(2px, -18px) rotate(-25deg);
+    transform: translate(2px, -18px) rotate(-25deg); } }
