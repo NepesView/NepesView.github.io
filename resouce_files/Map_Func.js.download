@@ -1,0 +1,320 @@
+﻿/*
+	############################################################################################################################
+
+	 페이지명	: /include/js/Map/Map_Func.js
+	 설명		: 네이버 지도 API 관련 함수
+	 생성자	: 김영필
+	 생성일	: 2017-10-30
+
+	############################################################################################################################
+*/
+var _marker = null;
+var _infoWindow = null;
+var listeners = [];
+
+$.extend({
+    /*##################################################################################
+
+		클래스
+
+	##################################################################################*/
+
+    // 포인트 지정
+    // LatLng (위도 / 경도), TM128(내비게이션 좌표)
+    $oPoint: function (_coord, _x, _y) {
+        var _Point = "";
+
+        switch (_coord) {
+            //좌표(Y, X)
+            case "LatLng": _Point = new naver.maps.LatLng(_x, _y); break;
+            case "TM128": _Point = new naver.maps.Point(_x, _y); break;
+        }
+
+        return _Point;
+    },
+    /*	
+	
+	- 맵 기본값 지정
+
+	point : Coord // 지도 중심점의 좌표
+	zoom : Number // 지도의 축척 레벨
+	boundary : Array // 지도 생성 시 주어진 array 에 있는 점이 모두 보일 수 있도록 지도를 초기화한다.
+	boundaryOffset : Number // boundary로 지도를 초기화 할 때 지도 전체에서 제외되는 영역의 크기.
+	enableWheelZoom : Boolean // 마우스 휠 동작으로 지도를 확대/축소할지 여부
+	enableDragPan : Boolean // 마우스로 끌어서 지도를 이동할지 여부
+	enableDblClickZoom : Boolean // 더블클릭으로 지도를 확대할지 여부
+	mapMode : Number // 지도 모드(0 : 일반 지도, 1 : 겹침 지도, 2 : 위성 지도)
+	activateTrafficMap : Boolean // 실시간 교통 활성화 여부
+	activateBicycleMap : Boolean // 자전거 지도 활성화 여부
+	minMaxLevel : Array // 지도의 최소/최대 축척 레벨
+	size : Size // 지도의 크기
+	detectCoveredMarker : Boolean // 겹쳐 있는 마커를 클릭했을 때 겹친 마커 목록 표시 여부
+	*/
+    $oMap: function (_ele, _oPoint, _width, _height) {
+        return new naver.maps.Map(_ele, {
+            center: _oPoint,
+            zoom: 11,
+            mapTypes: new naver.maps.MapTypeRegistry({
+                'normal': naver.maps.NaverMapTypeOption.getNormalMap({
+                    projection: naver.maps.TM128Coord
+                }),
+                'terrain': naver.maps.NaverMapTypeOption.getTerrainMap({
+                    projection: naver.maps.TM128Coord
+                }),
+                'satellite': naver.maps.NaverMapTypeOption.getSatelliteMap({
+                    projection: naver.maps.TM128Coord
+                }),
+                'hybrid': naver.maps.NaverMapTypeOption.getHybridMap({
+                    projection: naver.maps.TM128Coord
+                })
+            }),
+            mapTypeControl: false,
+            zoomControl: false, //줌 컨트롤의 표시 여부
+            zoomControlOptions: { //줌 컨트롤의 옵션
+                position: naver.maps.Position.TOP_RIGHT
+            },
+            size: new naver.maps.Size(_width, _height),
+            draggable: true,
+            scrollWheel: false,
+            scaleControl: false,
+            minZoom: 6,
+            maxZoom: 20,
+            disableDoubleTapZoom: false,
+            disableDoubleClickZoom: true,
+            useStyleMap: true
+        });
+    },
+
+    // 마커 상단 기업정보 노출(DIV ID 변경시 mapInfoWindw 클래스 변경)
+    $oMapInfoContent: function (_cName, _color) {
+        _color = (_color == null) ? "#313130" : _color;
+
+        var _mapInfoContent = "<DIV id=\"Map_Info\" name=\"Map_Info\" style=\"border:0px solid #FFFFE0;background-color:" + _color + "; filter:Alpha(opacity=80); opacity:0.8; -moz-opacity:0.8; width:auto; height:auto;\">";
+        _mapInfoContent += "<span style=\"color: #FFFFFF !important;display: inline-block;font-size: 12px !important;font-weight: bold !important;letter-spacing: -1px !important;white-space: nowrap !important; padding: 5px 5px 5px 5px !important;\">";
+        _mapInfoContent += decodeURI(_cName) + "<br /></span></div>";
+
+        return _mapInfoContent;
+    },
+
+    // 마커 지정(위치)
+    $oMarkerOptions: function (_oPoint, _title) {
+        var markerOptions = {
+            position: _oPoint,            
+            title: _title
+        };
+
+        return markerOptions;
+    },
+
+    // 지도에 표시되는 정보 창
+    $oMapInfoWindow: function (_cName, _color) {
+
+        return infoWindow = new naver.maps.InfoWindow({
+            disableAnchor: true,
+            anchorSkew: true,
+            pixelOffset: new naver.maps.Point(0, -40),
+            content: $.$oMapInfoContent(_cName, _color)
+        });
+    },
+    $oinfoWindowSet: function (_oPoint, _cName) {
+        _infoWindow = $.$oMapInfoWindow(_cName);
+        _infoWindow.open($oMap, _oPoint);
+    },
+    // 지도 API 생성
+    $mapAPI: function (ele, options) {
+        if (ele instanceof jQuery) { // ele가 jQuery 객체로 넘어오면
+            ele = ele.get(0);
+        } else if ($.type(ele) === "string") {
+            ele = document.getElementById(ele);
+        }
+        if (!ele) return null;
+
+        // option 추가
+        options = $.extend({
+            coord: "TM128",
+            positionX: "",
+            positionY: "",
+            cName: "",
+            zoomBln: false,
+            mapBln: true,
+            width: "",
+            height: "",
+            defaultBln: false
+        }, options);
+
+        var _opt = options;
+
+        var _oPoint = $.$oPoint(_opt.coord, _opt.positionX, _opt.positionY);
+
+        if (_opt.positionX > 10000000) {
+            _oPoint = $.$oPoint(_opt.coord, _opt.positionX / 100, _opt.positionY / 100);
+        }
+
+        $oMap = $.$oMap(ele, _oPoint, _opt.width, _opt.height);
+
+        if (!_opt.defaultBln) {
+            $.$oMarkerSet(_oPoint, _opt.cName);
+            $.$oinfoWindowSet(_oPoint, _opt.cName);
+        }
+
+        //
+        if (_opt.zoomBln) $.$mapZoom($oMap);
+        if (_opt.mapBln) $.$mapType($oMap);
+
+        //naver.maps.onJSContentLoaded = $oMap;
+
+        $(ele).data("map", $oMap); // map 인스턴스를 jQuery ele 객체에 data로 저장
+
+        // 전역변수 지정
+        // 좌표값 지정
+        $positionX = _opt.positionX;
+        $positionY = _opt.positionY;
+    },
+
+    /*##################################################################################
+
+		컨트롤
+
+	##################################################################################*/
+
+    // Zoom 컨트롤
+    $mapZoom: function () {
+        $oMap.setOptions({
+            zoomControl: true
+        });
+    },
+
+    // 일반맵, 위성맵 컨트롤
+    $mapType: function () {
+        $oMap.setOptions({
+            mapTypeControl: true
+        });
+    },
+
+    /*##################################################################################
+
+		이벤트
+
+	##################################################################################*/
+
+    // 클릭 이벤트 핸들러(마커생성)
+    $mapClkMarker: function (e, _cName) {
+        var _coord = e.coord;
+
+        $positionX = _coord.x;
+        $positionY = _coord.y;
+
+        if (!_marker.getMap()) {
+            var _oPoint = $.$oPoint("TM128", $positionX, $positionY);
+
+            $.$oMarkerSet(_oPoint, _cName);
+            $.$oinfoWindowSet(_oPoint, _cName);
+        }
+        else {
+            _marker.setPosition(e.coord);
+            _infoWindow.setPosition(e.coord);
+        }
+
+        $.$map_Center($positionX, $positionY);
+    },
+    $oMarkerSet: function (_oPoint, _cName) {
+        _marker = new naver.maps.Marker($.$oMarkerOptions(_oPoint, _cName), _cName);
+        _marker.setMap($oMap);
+    },
+    // attach - 이벤트 추가. 지도에서의 이벤트 추가는 attach를 통해 이루어진다.
+    // 클릭유형, 실행이벤트명
+    $mapAddClkEvent: function (_clkType, _cName) {
+        //일단 모든 리스너 삭제
+        if (listeners.length > 0)
+            naver.maps.Event.removeListener(listeners);
+
+        listeners = [
+            naver.maps.Event.addListener($oMap, _clkType, function (e) {
+                $.$mapClkMarker(e, _cName);
+            })
+        ];
+    },
+    // 센터 정렬
+    $map_Center: function (_x, _y) {
+        $oMap.setCenter($.$oPoint("TM128", _x, _y));
+    },
+
+    // 오버레이 전체 삭제
+    $map_ClearLay: function () {
+        if (!_marker.getMap()) return;
+
+        _marker.setMap(null);
+        _infoWindow.setMap(null);
+    },
+    // 마커, 정보 창 재생성
+    $map_MarkerInfo: function (_x, _y, _cName) {
+        //일단 모든 리스너 삭제
+        if (listeners.length > 0)
+            naver.maps.Event.removeListener(listeners);
+
+        $.$map_ClearLay();
+
+        var _point = $.$oPoint("TM128", _x, _y);
+
+        $.$oMarkerSet(_point, _cName);
+        $.$oinfoWindowSet(_point, _cName);
+
+        $.$map_Center(_x, _y);
+    },
+    // 좌표값 받아오기 - jSon
+    $positionDataJson: function (_addr, _cName, _coord) {
+        var _apiURL = "/include/Map/Map_Func.asp?";
+        _apiURL += "dataType=json&C_Address=" + _addr;
+
+        $.getJSON(_apiURL, function (data) {
+            $positionX = data.X_Position;
+            $positionY = data.Y_Position;
+
+            $.$map_MarkerInfo($positionX, $positionY, _cName);
+        });
+
+    },
+    //마커 이동(맵 위치 수정)
+    $markerMove: function (_cName) {
+        alert("수정을 원하는 위치에서 더블클릭 해주세요.");
+        $.$map_ClearLay();
+        $.$mapAddClkEvent("dblclick", _cName);
+        //$.$mapAddClkEvent("click", _cName);
+    },
+    
+    // 빠른길 찾기(네이버로 이동)
+    $naverPop: function (_x, _y, _cName) {
+        var _url = "http://maps.naver.com"
+
+        if (_x != null && _y != null) {
+            _url += "?sX=&sY=&sText=&eX=" + _x + "&eY=" + _y + "&eText=" + _cName;
+        }
+
+        var _win = window.open(_url);
+        _win.focus();
+    },
+
+    /*##################################################################################
+
+		map.jobkorea.co.kr 사용함수
+
+	##################################################################################*/
+    
+    /*##################################################################################
+
+		retrun 객체 
+
+	##################################################################################*/
+    //	X_좌표
+    $positionX_val: function () {
+        return $positionX;
+    },
+
+    //	Y_좌표
+    $positionY_val: function () {
+        return $positionY;
+    }
+})
+
+
+
